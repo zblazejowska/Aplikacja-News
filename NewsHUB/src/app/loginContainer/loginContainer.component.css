@@ -1,0 +1,48 @@
+#loginContent {
+  width: 100%;
+  height: 78vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw;
+}
+
+#profileContent {
+  width: 100%;
+  overflow: hidden;
+}
+
+#napis{
+  text-align: center;
+  font-size: 1.6vw;
+  font-weight: 600;
+}
+
+.hr{
+  background-color: #717171;
+  height: 1px;
+  width: 40%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 30%;
+}
+
+#fireAuthCont {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logOutCommunicate {
+  font-size: 1vw;
+  text-align: center;
+}
+
+#goToProfile {
+  color: dodgerblue;
+}
+
+#goToProfile:hover, #goToProfile:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}

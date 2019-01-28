@@ -1,0 +1,23 @@
+.btnAboutProject {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+}
+
+.btnAboutProject:hover {
+  display: block;
+}
+
+#btnAboutProject {
+  padding: 20px;
+  color: lightgray;
+  font-size: 12px;
+  margin: 0;
+
+}
+
+#btnAboutProject:hover, #btnAboutProject:focus {
+  background-color: #707070;
+  padding: 20px;
+  outline: none;
+}

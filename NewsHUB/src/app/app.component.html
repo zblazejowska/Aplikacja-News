@@ -1,0 +1,21 @@
+<nav id="header">
+  <img routerLink="homepage/6" class="logoTop" src="assets/newshub_logo_small.png"/>
+  <button type="button" class="btn btn-light" id="logInBtn" routerLink="login">LOG IN</button>
+  <profileMenu></profileMenu>
+  <searchBar></searchBar>
+</nav>
+<catMenu></catMenu>
+<div id="content">
+  <div id="newsContainer">
+    <router-outlet></router-outlet>
+  </div>
+  <weather></weather>
+</div>
+
+<nav class="navbar" id="footer">
+  <img class="logoBottom" src="assets/newshub_logo_small.png"/>
+  <div id="footerContent">
+    <p>Copyright Ⓒ 2018 Drużyna Pierścienia. All rights reserved.</p>
+  </div>
+  <btnAboutProject></btnAboutProject>
+</nav>

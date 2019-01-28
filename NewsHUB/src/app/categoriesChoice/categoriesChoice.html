@@ -1,0 +1,55 @@
+<div id="categoriesChoiceContent">
+  <div class="leftContent">
+    <img id="newsImage" src="assets/newspaper.png" alt="news_image">
+    <h3>News</h3>
+  </div>
+
+  <div class="rightContent">
+    <form id="categoriesChoiceForm">
+      <h5>Categories</h5>
+      <div class="form-check-inline first">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="categories" id="businessInput" value="business" checked>
+          Business
+        </label>
+      </div>
+      <div class="form-check-inline second">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="categories" id="entertainmentInput" value="entertainment" checked>
+          Entertainment
+        </label>
+      </div>
+      <br />
+      <div class="form-check-inline first">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="categories" id="healthInput" value="health" checked>
+          Health
+        </label>
+      </div>
+      <div class="form-check-inline third">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="categories" id="scienceInput" value="science" checked>
+          Science
+        </label>
+      </div>
+      <br />
+      <div class="form-check-inline first">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="categories" id="sportInput" value="sports" checked>
+          Sport
+        </label>
+      </div>
+      <div class="form-check-inline fourth">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="categories" id="technologyInput" value="technology" checked>
+          Technology
+        </label>
+      </div>
+    </form>
+    <button (click)="addCatChoice()" type="submit" class="btn btn-light" form="categoriesChoiceForm" id="categoriesSubmit">SAVE</button>
+  </div>
+</div>
+
+
+
+

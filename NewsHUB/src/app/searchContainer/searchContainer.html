@@ -1,0 +1,2 @@
+<div id="info">You are looking for:<span class="special"> {{searchTag}} </span>. Found<span class="special"> {{articles.length}} </span>articles.</div>
+<article [articleFromArray]=articles[i]  *ngFor="let article of articles; let i = index" [articleId]="i"></article>

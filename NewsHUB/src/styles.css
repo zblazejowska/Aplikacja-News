@@ -1,0 +1,9 @@
+body {
+  background-color: lightgray;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}

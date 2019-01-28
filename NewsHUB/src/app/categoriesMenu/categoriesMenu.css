@@ -1,0 +1,17 @@
+#catMenu {
+  min-height: 40px;
+  background-color: #53A2BE;
+  box-shadow: 0 6px 5px #707070;
+  margin: 0;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.cat{
+  color:white;
+}
+a{
+  margin-left: 2.6vw;
+  font-size: 1.3vw;
+}

@@ -1,0 +1,36 @@
+<div id="userDataContent">
+  <div class="leftContent">
+    <img id="userImage" src="assets/user_color.png" alt="user_image">
+    <h3 id="username">janek99</h3>
+  </div>
+
+  <form id="userDataForm">
+    <h5>User data</h5>
+    <div class="form-group row">
+      <label id="name" for="inputName" class="col-sm-2 col-form-label">First name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputName" placeholder="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputSurname" class="col-sm-2 col-form-label">Last name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputSurname" placeholder="">
+      </div>
+    </div>
+    <div class="form-group row dl">
+      <label for="inputUsername" class="col-sm-2 col-form-label">Username</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputUsername" placeholder="" disabled>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="inputEmail" placeholder="" disabled>
+      </div>
+    </div>
+  </form>
+  <button (click)="addUserData()" type="submit" class="btn btn-light" form="userDataForm" id="userSubmit">SAVE</button>
+</div>
+

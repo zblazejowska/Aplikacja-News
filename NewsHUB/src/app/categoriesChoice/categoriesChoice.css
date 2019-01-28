@@ -1,0 +1,101 @@
+#categoriesChoiceContent {
+  width: 96%;
+  height: 18vw;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 2vw;
+  border-bottom: 1px solid lightgray;
+  /*background-color: #00FFFF;*/
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+h5 {
+  display: block;
+  font-size: 1vw;
+  font-weight: 700;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  margin-bottom: 0.8vw;
+}
+
+.leftContent {
+  float: left;
+  width: 18.5vw;
+  height: 16vw;
+  margin-left: 0;
+  border-right: 1px solid gray;
+  /*background-color: #6FB1C8;*/
+}
+
+#newsImage {
+  width: 8vw;
+  height: 8vw;
+  margin-left: 5vw;
+  margin-top: 2.5vw;
+}
+
+.rightContent {
+  float: left;
+  height: 16vw;
+  /*background-color: #1c94c4;*/
+}
+
+.first {
+  margin-left: 1.5vw;
+}
+
+.second{
+  margin-left: 2.5vw;
+}
+
+.third{
+  margin-left: 3.75vw;
+}
+
+.fourth{
+  margin-left: 4.25vw;
+}
+
+.form-check-label {
+  font-size: 1.1vw;
+}
+
+.form-group.row {
+  height: 2.5vw;
+  margin-top: 1.3vw;
+  margin-left: 0.4vw;
+}
+
+.form-group.row label {
+  text-align: right;
+  font-size: 0.9vw;
+}
+
+.custom-select {
+  font-size: 0.9vw;
+}
+
+#categoriesSubmit {
+  float: left;
+  margin-top: 0.5vw;
+  border: none;
+  margin-left: 36vw;
+  color: white;
+  height: 30px;
+  font-weight: 600;
+  font-size: 0.8vw;
+  -webkit-box-shadow: 0.1vw 1vw #000;
+  -moz-box-shadow: 1vw 1vw #000;
+  box-shadow: 0 0.1vw 5px #888888;
+  background-color: #FF8080;
+}
+
+#categoriesSubmit:hover {
+  background-color: #DE6F6F;
+  text-shadow: 1px 2px #888888;
+}

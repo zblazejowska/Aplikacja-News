@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NewsHUB</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyAMc1KI-zlkosp7qLKeMB4_F5Nvv82C-FM",
+     authDomain: "newshub-3011.firebaseapp.com",
+     databaseURL: "https://newshub-3011.firebaseio.com",
+     projectId: "newshub-3011",
+     storageBucket: "newshub-3011.appspot.com",
+     messagingSenderId: "159798983174"
+    };
+  firebase.initializeApp(config);
+  </script>
+
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+
+  <script type="text/javascript">
+    // FirebaseUI config.
+    var uiConfig = {
+      signInSuccessUrl: './index.html',
+      signInFlow: 'popup',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      ],
+      // Terms of service url.
+      tosUrl: '/homepage'
+    };
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+
+  <script type="text/javascript">
+    initApp = function() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          user.getIdToken().then(function(accessToken) {
+            document.getElementById('logInBtn').textContent = 'LOG OUT';
+            if (document.getElementById('profileDiv')) {
+              document.getElementById('username').innerHTML = user.displayName;
+              document.getElementById('inputUsername').setAttribute('placeholder', user.displayName);
+              document.getElementById('inputEmail').setAttribute('placeholder', user.email);
+              document.getElementById('userImage').setAttribute('src', user.photoURL);
+              document.getElementById('profileFiller').classList.add('hidden');
+            }
+            if (document.getElementById('loginDiv')) {
+              document.getElementById('logUsername').innerHTML = user.displayName;
+              document.getElementById('fireAuthCont').classList.add('hidden');
+              document.getElementById('logOutCommunicate').classList.remove('hidden');
+            }
+          });
+        } else {
+          // User is signed out.
+          document.getElementById('logInBtn').textContent = 'LOG IN';
+          if (document.getElementById('profileDiv')) {
+            document.getElementById('profileMain').classList.add('hidden');
+            document.getElementById('logInCommunicate').classList.remove('hidden');
+            document.getElementById('catMenu').classList.add('hidden');
+          }
+          if (document.getElementById('catDiv')) {
+            document.getElementById('catMenu').classList.add('hidden');
+          }
+          if (document.getElementById('searchDiv')) {
+            document.getElementById('searchContent').classList.add('hidden');
+          }
+        }
+      }, function(error) {
+        console.log(error);
+      });
+    };
+    window.addEventListener('load', function() {
+      initApp()
+    });
+
+    window.addEventListener('click', function() {
+      if (document.getElementById('firebaseui-auth-container')) {
+        ui.start('#firebaseui-auth-container', uiConfig);
+      }
+      if (document.getElementById('profileDiv')) {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            document.getElementById('username').innerHTML = user.displayName;
+            document.getElementById('inputUsername').setAttribute('placeholder', user.displayName);
+            document.getElementById('inputEmail').setAttribute('placeholder', user.email);
+            document.getElementById('userImage').setAttribute('src', user.photoURL);
+            document.getElementById('profileFiller').classList.add('hidden');
+
+          } else {
+            document.getElementById('profileMain').classList.add('hidden');
+            document.getElementById('logInCommunicate').classList.remove('hidden');
+          }
+        })
+      }
+      if (document.getElementById('loginDiv')) {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            document.getElementById('logUsername').innerHTML = user.displayName;
+            document.getElementById('fireAuthCont').classList.add('hidden');
+            document.getElementById('logOutCommunicate').classList.remove('hidden');
+          } else {}
+        })
+      }
+      if (document.getElementById('catDiv')) {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+          } else {
+            document.getElementById('catMenu').classList.add('hidden');
+          }
+        })
+      }
+      if (document.getElementById('searchDiv')) {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+          } else {
+            document.getElementById('searchContent').classList.add('hidden');
+          }
+        })
+      }
+    });
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

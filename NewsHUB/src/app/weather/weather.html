@@ -1,0 +1,36 @@
+<div class="slideout-widget widget-facebook">
+  <div class="slideout-widget-handler">
+    <img src="{{weather.icon}}" id="weatherImage2">
+  </div>
+  <div class="slideout-widget-content">
+    <div id="weatherContainer">
+      <div id="top">
+        <h3>Current weather</h3>
+        <p id="dateCity"><date-pipe></date-pipe>, {{weather.name}}</p>
+      </div>
+      <div id="middle">
+        <img src="{{weather.icon}}" id="weatherImage">
+        <h2 id="temperature">{{weather.temp}}°C</h2>
+        <h6 id="description">{{weather.description}}</h6>
+      </div>
+      <p class="weatherInfo" id="wind">Wind speed: <span>{{weather.speed}} km/h</span></p>
+      <p class="weatherInfo" id="pressure">Pressure: <span>{{weather.pressure}} hPa</span></p>
+      <div *ngIf="chart">
+        <div class="charts">
+          <canvas id="humidity">{{ chart }}</canvas>
+          <h6>{{weather.humidity}}%</h6>
+          <p>Humidity</p>
+        </div>
+        <div class="charts">
+          <canvas id="clouds">{{ chart }}</canvas>
+          <h6>{{weather.clouds}}%</h6>
+          <p>Clouds</p>
+        </div>
+      </div>
+      <div id="timeContainer">
+        <p id="syncTime">{{weather.time}}</p>
+        <img src="assets/sync.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>

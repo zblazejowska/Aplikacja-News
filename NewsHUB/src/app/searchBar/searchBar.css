@@ -1,0 +1,27 @@
+@media only screen and (max-width: 1000px) {
+  #navbarForm {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+#navbarForm {
+  float: right;
+  margin-right: 1%;
+  margin-top: 15px;
+}
+#navbarSearch {
+  color: white;
+  background-color: #53A2BE;
+}
+
+#navbarSearch::placeholder {
+  color: white;
+}
+
+#searchBtn img {
+  height: 30px;
+  width: 30px;
+}
+
+

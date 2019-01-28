@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin-ext');
+
+#aboutContent {
+  width: 70%;
+  height: 190vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vw;
+  font-family: 'Lora', serif;
+  /*background-color: #1c94c4;*/
+}
+
+#projectInfo {
+  width: auto;
+  height: 39vw;
+  padding-bottom: 2vw;
+  margin-top: 3vw;
+  margin-bottom: 4vw;
+  text-align: center;
+  font-size: 0.9vw;
+  border-bottom: 1px solid #888888;
+  /*background-color: #6FB1C8;*/
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5vw;
+  font-size: 1.8vw;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+}
+
+p a {
+  color: dodgerblue;
+}
+
+.toolsImages {
+  width: 5vw;
+  height: 5vw;
+  float: left;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 2.1vw;
+  margin-top: 1.5vw;
+}
+
+#squadInfo {
+  width: auto;
+  height: 34vw;
+  margin-top: 2vw;
+  padding-bottom: 2vw;
+  border-bottom: 1px solid #888888;
+  /*background-color: #6FB1C8;*/
+}
+
+#squadInfo h1 {
+  margin-bottom: 2.5vw;
+}
+
+.person {
+  width: 40%;
+  height: 12vw;
+  float: left;
+  margin-left: 7%;
+  margin-bottom: 2vw;
+  padding-top: 2vw;
+  border: 1px solid #888888;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: rgba(158, 203, 213, 0.3);
+}
+
+.person h4 {
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+}
+
+.squadPhotos {
+  width: 6vw;
+  height: 6vw;
+  border: 1px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 6vw;
+}
+
+#workInfo {
+  width: auto;
+  height: auto;
+  margin-top: 2vw;
+  padding-bottom: 2vw;
+  /*background-color: #6FB1C8;*/
+}
+
+th {
+  font-size: 0.9vw;
+}
+
+td {
+  font-size: 0.8vw;
+}

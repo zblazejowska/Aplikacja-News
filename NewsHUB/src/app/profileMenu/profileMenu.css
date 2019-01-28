@@ -1,0 +1,29 @@
+@media only screen and (max-width: 500px) {
+  .profileBtn {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.profileBtn {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+}
+
+.profileBtn:hover {
+  display: block;
+}
+
+#profileBtn {
+  padding: 11px;
+  float: right;
+  margin-right: 10px;
+}
+
+#profileBtn:hover, #profileBtn:focus {
+  background-color: #53A2BE;
+  padding: 11px;
+  margin-right: 10px;
+  outline: none;
+}

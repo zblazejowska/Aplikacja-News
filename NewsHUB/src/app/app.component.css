@@ -1,0 +1,107 @@
+@media only screen and (max-width: 500px) {
+  #logInBtn {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #footer p {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+#content {
+  max-width: 65%;
+  min-width: 450px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  position: relative;
+}
+.after{
+  clear: both;
+}
+
+#newsContainer {
+  min-height: 500px;
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+  padding-bottom: 5vw;
+  float: left;
+}
+
+#header {
+  min-height: 70px;
+  background-color: #008AA8;
+  box-shadow: 0 3px 10px #707070;
+  margin: 0;
+  padding-left: 17%;
+  padding-right: 17%;
+}
+.logoTop{
+  height: 52px;
+  position: relative;
+  display: inline;
+  margin-top: 8px;
+  float: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.logoTop:hover {
+  border-radius: 12px;
+  background-color: #53A2BE;
+}
+
+#logInBtn {
+  float: right;
+  margin-top: 15px;
+  border: none;
+  margin-right: 10px;
+  color: white;
+  height: 36px;
+  background-color: #FF8080;
+}
+
+#logInBtn:hover {
+  background-color: #DE6F6F;
+  text-shadow: 1px 2px #888888;
+}
+
+#footer {
+  height: 60px;
+  width: 100%;
+  background-color: #434343;
+}
+
+#footer p {
+  color: lightgray;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+/*#aFooter {*/
+  /*margin: 0;*/
+  /*margin-left: 17%;*/
+  /*padding: 5px;*/
+  /*color: white;*/
+  /*font-size: 25px;*/
+  /*font-weight: 700;*/
+/*}*/
+
+#footerContent {
+  margin-right: 5%;
+}
+
+.logoBottom{
+  height: 80%;
+  margin-left: 17%;
+}
+
+btnAboutProject{
+  margin-right: 17%;
+}
